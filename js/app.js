@@ -10,15 +10,16 @@ function playerSuccess(response){
 }
 
 function playerFailure(error){
-    console.log(error);
+    // console.log(error);
+    document.body.insertAdjacentHTML(`beforeend`, `<p>Error getting API</p>`);
 }
 
 function getPlayer(){
     alert("Your API is coming soon!");
     axios.request({
-        url : "https://www.balldontlie.io/api/v1/players",
+        url : "https://wwww.balldontlie.io/api/v1/players",
     }).then(playerSuccess).catch(playerFailure);
 }
 
 
-document.getElementById(`mainButton`).addEventListener(`click`, getPlayer)
+document.getElementById(`mainButton`).addEventListener(`click`, getPlayer);
